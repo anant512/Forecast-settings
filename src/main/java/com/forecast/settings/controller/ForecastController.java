@@ -37,47 +37,7 @@ public class ForecastController {
 		return new ResponseEntity<Forecast>(newforecast,HttpStatus.CREATED);
 	}
 	
-//	@GetMapping("/forecasts")
-//	public List<Forecast> getAll(){
-//		return forecastRepo.findAll();
-//	}
-	
-	@GetMapping("/forecast/{tenantId}")
-	public ResponseEntity<Forecast> getForecastById(@PathVariable Integer tenantId){
-		Forecast forecast=this.forecastService.getForecastById(tenantId);
-		return new ResponseEntity<Forecast>(forecast,HttpStatus.OK);
-	}
-	
-//	@GetMapping("/forecasts")
-//	public List<Forecast> findForecastByFunctionName(
-//			@RequestParam("functionName") String functionName,
-//			@RequestParam("parameter") String parameter,
-//			@RequestParam("parameterValue") String parameterValue,Pageable pageable
-//			
-//			) {
-//		if(functionName!=null) {
-//			
-//		if(parameter!=null) {
-//		if(parameterValue!=null) {
-//			return   forecastRepo.findByFunctionNameAndParameterAndParameterValue(functionName, parameter, parameterValue, pageable);
-//				    
-//				}
-//					
-//				
-//					
-//				
-//			}
-//		
-//		}
-//		else {
-//			System.out.println("inside the else condition");
-//			return  forecastRepo.findByParameterAndParameterValue(parameter, parameterValue, pageable);
-//			
-//		}
-//		
-//		return forecastRepo.findAll();
-//	}
-	
+
 	@GetMapping("/forecasts")
 	public List<Forecast> findForecastByFunctionName(
 			@RequestParam("functionName") String functionName,
@@ -85,25 +45,34 @@ public class ForecastController {
 			@RequestParam("parameterValue") String parameterValue,Pageable pageable
 			
 			) {
-		if(!StringUtils.isEmpty(functionName)) {
-		 if(!StringUtils.isEmpty(parameter)) {
-		if(!StringUtils.isEmpty(parameterValue)) {
-			return   forecastRepo.findByFunctionNameAndParameterAndParameterValue(functionName, parameter, parameterValue, pageable);
-		   
-				}		
-		 
-			}
-		
+		if((!StringUtils.isEmpty(functionName))&&(!StringUtils.isEmpty(parameter)&&(!StringUtils.isEmpty(parameterValue)))) {
+			
+			return forecastRepo.findByFunctionNameAndParameterAndParameterValue(functionName, parameter, parameterValue, pageable);
 		}
-		 else {
-				System.out.println("inside  else method");
-				return  forecastRepo.findByParameterAndParameterValue(parameter, parameterValue, pageable);
-			}
+			
+		else if ((StringUtils.isEmpty(functionName))&&(!StringUtils.isEmpty(parameter)&&(!StringUtils.isEmpty(parameterValue)))) {
+			return forecastRepo.findByParameterAndParameterValue(parameter, parameterValue, pageable);
+		}
 		
-		return forecastRepo.findAll();
-	}
-
-	
+		else if(!StringUtils.isEmpty(functionName)&&(StringUtils.isEmpty(parameter)&&(StringUtils.isEmpty(parameterValue)))) {
+			return forecastRepo.findByFunctionName(functionName, pageable);
+			
+		}else if((StringUtils.isEmpty(functionName))&&(!StringUtils.isEmpty(parameter)&&(StringUtils.isEmpty(parameterValue)))) {
+			System.out.println("inside parameter method");
+			return forecastRepo.findByParameter(parameter, pageable);
+			
+		}else if((StringUtils.isEmpty(functionName))&&(StringUtils.isEmpty(parameter)&&(!StringUtils.isEmpty(parameterValue)))) {
+			return forecastRepo.findByParameterValue(parameterValue, pageable);
+			
+		}else if ((!StringUtils.isEmpty(functionName))&&(!StringUtils.isEmpty(parameter)&&(StringUtils.isEmpty(parameterValue)))) {
+			return forecastRepo.findByFunctionNameAndParameter(functionName, parameter, pageable);
+		}else if ((!StringUtils.isEmpty(functionName))&&(StringUtils.isEmpty(parameter)&&(!StringUtils.isEmpty(parameterValue)))) {
+			return forecastRepo.findByFunctionNameAndParameterValue(functionName, parameterValue, pageable);
+		}
+			return forecastRepo.findAll();
+			
+		}
+		
 	
 	@DeleteMapping("/forecast/{tenantId}")
 	public ApiResponse  deleteForecast(@PathVariable Integer tenantId) {

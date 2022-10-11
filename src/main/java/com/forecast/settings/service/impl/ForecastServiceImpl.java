@@ -63,6 +63,31 @@ public class ForecastServiceImpl implements ForecastService {
 		return forecasts;
 	}
 
+	@Override
+	public List<Forecast> findByParameterValue(String parameterValue, Pageable pageable) {
+		List<Forecast> forecasts=this.forecastRepo.findByParameterValue(parameterValue, pageable);
+		return forecasts;
+	}
+
+	@Override
+	public List<Forecast> findByParameter(String parameter, Pageable pageable) {
+	List<Forecast> forecasts=this.forecastRepo.findByParameter(parameter, pageable);
+		return forecasts;
+	}
+
+	@Override
+	public List<Forecast> findByFunctionNameAndParameter(String functionName, String parameter, Pageable pageable) {
+		List<Forecast> forecasts=this.forecastRepo.findByFunctionNameAndParameter(functionName, parameter, pageable);
+		return forecasts;
+	}
+
+	@Override
+	public List<Forecast> findByFunctionNameAndParameterValue(String functionName, String parameterValue,
+			Pageable pageable) {
+		List<Forecast> forecasts= this.forecastRepo.findByFunctionNameAndParameterValue(functionName, parameterValue, pageable);
+		return forecasts;
+	}
+
 	
 
 	
