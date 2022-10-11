@@ -11,6 +11,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -30,8 +33,10 @@ public class Forecast {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int tenantId;
 	private String updatedBy;
-	private Date createdOn;
-	private  Date updatedOn;
+	@CreationTimestamp
+	private Timestamp createdOn;
+	@UpdateTimestamp
+	private  Timestamp updatedOn;
 	
 
 }
