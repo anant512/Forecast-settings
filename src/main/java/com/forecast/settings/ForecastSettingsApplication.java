@@ -8,6 +8,7 @@ public class ForecastSettingsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ForecastSettingsApplication.class, args);
+		System.out.println("application is started on port : 9090");
 	}
 
 }
