@@ -2,6 +2,8 @@ package com.forecast.settings.controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -22,7 +24,7 @@ import com.forecast.settings.service.ForecastService;
 
 @RestController
 public class ForecastController {
-	
+	private static final Logger LOGGER=LoggerFactory.getLogger(ForecastController.class);
 	@Autowired
 	private ForecastRepo forecastRepo;
 	

@@ -1,0 +1,27 @@
+2022-10-19 15:47:44.826  INFO 16248 --- [restartedMain] c.f.s.ForecastSettingsApplication        : Starting ForecastSettingsApplication using Java 17.0.3 on LAPTOP-6MSSBC2O with PID 16248 (C:\Users\Anant Prakash\Documents\workspace-spring-tool-suite-4-4.15.1.RELEASE\forecastSettings\target\classes started by Anant Prakash in C:\Users\Anant Prakash\Documents\workspace-spring-tool-suite-4-4.15.1.RELEASE\forecastSettings)
+2022-10-19 15:47:44.827  INFO 16248 --- [restartedMain] c.f.s.ForecastSettingsApplication        : No active profile set, falling back to 1 default profile: "default"
+2022-10-19 15:47:45.032  INFO 16248 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-19 15:47:45.042  INFO 16248 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interfaces.
+2022-10-19 15:47:45.128  INFO 16248 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-10-19 15:47:45.129  INFO 16248 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-19 15:47:45.129  INFO 16248 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-19 15:47:45.152  INFO 16248 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-19 15:47:45.153  INFO 16248 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 319 ms
+2022-10-19 15:47:45.184  INFO 16248 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-19 15:47:45.190  INFO 16248 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-10-19 15:47:45.222  INFO 16248 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-10-19 15:47:45.222  INFO 16248 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-10-19 15:47:45.307  INFO 16248 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-19 15:47:45.307  INFO 16248 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-19 15:47:45.407  WARN 16248 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-19 15:47:45.520  INFO 16248 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-19 15:47:45.532  INFO 16248 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-10-19 15:47:45.535  INFO 16248 --- [restartedMain] c.f.s.ForecastSettingsApplication        : Started ForecastSettingsApplication in 0.834 seconds (JVM running for 1141.961)
+2022-10-19 15:47:45.537  INFO 16248 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-10-19 15:47:45.537  WARN 16248 --- [restartedMain] c.f.s.ForecastSettingsApplication        : we are testing the forecast Settings  application
+2022-10-19 15:47:45.538  INFO 16248 --- [restartedMain] c.f.s.ForecastSettingsApplication        : server started on port : 9090
+2022-10-19 15:49:03.967  INFO 16248 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-10-19 15:49:03.981  INFO 16248 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-19 15:49:03.985  INFO 16248 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-19 15:49:03.985  INFO 16248 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-10-19 15:49:03.990  INFO 16248 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
