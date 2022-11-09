@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.forecast.settings.dao.ForecastRepo;
+import com.forecast.settings.dao.ForecastRepository;
 import com.forecast.settings.model.Forecast;
 import com.forecast.settings.payload.*;
 import com.forecast.settings.service.ForecastService;
@@ -26,7 +26,7 @@ import com.forecast.settings.service.ForecastService;
 public class ForecastController {
 	private static final Logger LOGGER=LoggerFactory.getLogger(ForecastController.class);
 	@Autowired
-	private ForecastRepo forecastRepo;
+	private ForecastRepository forecastRepo;
 	
 	@Autowired
 	private ForecastService forecastService;

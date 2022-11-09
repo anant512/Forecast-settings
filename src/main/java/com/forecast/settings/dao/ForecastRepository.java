@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.forecast.settings.model.Forecast;
 
-public interface ForecastRepo extends JpaRepository<Forecast,Integer>{
+public interface ForecastRepository extends JpaRepository<Forecast,Integer>{
 	
 	
 
