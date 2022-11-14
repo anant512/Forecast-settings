@@ -50,7 +50,7 @@ public class ForecastController {
 			
 			return forecastRepo.findByFunctionNameAndParameterAndParameterValue(functionName, parameter, parameterValue, pageable);
 		}
-			
+			 
 		else if ((StringUtils.isEmpty(functionName))&&(!StringUtils.isEmpty(parameter)&&(!StringUtils.isEmpty(parameterValue)))) {
 			return forecastRepo.findByParameterAndParameterValue(parameter, parameterValue, pageable);
 		}

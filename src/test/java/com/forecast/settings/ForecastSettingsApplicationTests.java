@@ -52,8 +52,6 @@ private ForecastRepository forecastRepo;
 	@Test
 	@Order(3)
 	public void testSingleForecast() {
-//		List<Forecast> forecast =forecastRepo.findByFunctionName("dc settings", null);
-//		assertThat(forecast).isEqualTo(forecastRepo.findByFunctionName("dc serttings", null));
 		Forecast forecast =forecastRepo.findById(1).get();
 		assertEquals("dc settings",forecast.getFunctionName());
 		
