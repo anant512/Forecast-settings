@@ -27,7 +27,7 @@ private ForecastRepository forecastRepo;
 	
 	@Test
 	@Order(1)
-	void createForecast() {
+	void saveForecast() {
 		
 		Forecast f=new Forecast();
 		f.setFunctionName("dc settings");
